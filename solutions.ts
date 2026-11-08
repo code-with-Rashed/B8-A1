@@ -24,3 +24,7 @@ function formatCoordinate(location: readonly [number, number, string]): string {
   const [latitude, longitude, locationName] = location;
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.flat();
+}
